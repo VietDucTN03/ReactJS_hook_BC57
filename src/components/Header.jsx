@@ -51,6 +51,61 @@ const Header = () => {
               <NavLink className="dropdown-item" to="/use-effect-didmount">
                 UseEffect_DidMount
               </NavLink>
+              <NavLink className="dropdown-item" to="/use-effect-didupdate">
+                UseEffect_DidUpdate
+              </NavLink>
+              <NavLink className="dropdown-item" to="/use-effect-unmount">
+                UseEffect_UnMount
+              </NavLink>
+              <NavLink className="dropdown-item" to="/ex-hook-usecallback">
+                Ex_Hook_UseCallBack
+              </NavLink>
+              <NavLink className="dropdown-item" to="/ex-hook-usememo">
+                UseMemo
+              </NavLink>
+              <NavLink className="dropdown-item" to="/ex-hook-useRef">
+                UseRef
+              </NavLink>
+            </div>
+          </li>
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Hook_Redux
+            </a>
+            <div className="dropdown-menu" aria-labelledby="dropdownId">
+              <NavLink className="dropdown-item" to="/ex-hook-redux">
+                Ex_Hook_Redux
+              </NavLink>
+              <NavLink className="dropdown-item" to="/ex-change-fontsize-hook-redux">
+                Ex_Change_FontSize_Hook_Redux
+              </NavLink>
+              <NavLink className="dropdown-item" to="/ex-crud-product">
+                Ex_CRUD_Product (Redux)
+              </NavLink>
+            </div>
+          </li>
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Library Hook
+            </a>
+            <div className="dropdown-menu" aria-labelledby="dropdownId">
+              <NavLink className="dropdown-item" to="/ex-hook-formik">
+                Ex_Hook_Formik
+              </NavLink>
             </div>
           </li>
         </ul>
