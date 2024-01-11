@@ -26,6 +26,8 @@ import Detail from "./pages/Detail";
 import Search from "./pages/Search";
 import TrangChuCustomHook from "./pages/TrangChuCustomHook"
 import AntDemo from "./pages/AntDesign/AntDemo";
+import TableAntd from "./pages/AntDesign/TableAntd";
+import ProductManagement from "./pages/AntDesign/ProductManagement";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -46,6 +48,9 @@ root.render(
           <Route path="/ex-hook-usememo" element={<ExHookUseMemo/>} />
           <Route path="/ex-hook-useRef" element={<ExHookUseRef/>} />
           <Route path="/ex-hook-formik" element={<ExHookFormik/>} />
+          <Route path="/table-antd-design" element={<TableAntd/>} />
+          <Route path="/prod-management" element={<ProductManagement/>} />
+
           <Route path="/login" element={<Login/>} />
           <Route path="/profile" element={<Profile/>} />
           <Route path="/forgot-password" element={<ForgotPassword/>} />

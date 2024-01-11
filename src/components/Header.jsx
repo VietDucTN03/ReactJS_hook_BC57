@@ -30,10 +30,29 @@ const Header = () => {
               Login
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/ant-demo">
-              Ant Design
-            </NavLink>
+
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Antd Design
+            </a>
+            <div className="dropdown-menu" aria-labelledby="dropdownId">
+              <NavLink className="dropdown-item" to="/ant-demo">
+                Ant Design
+              </NavLink>
+              <NavLink className="dropdown-item" to="/table-antd-design">
+                Table Antd Design
+              </NavLink>
+              <NavLink className="dropdown-item" to="/prod-management">
+                Product Management
+              </NavLink>
+            </div>
           </li>
           <li className="nav-item dropdown">
             <a
