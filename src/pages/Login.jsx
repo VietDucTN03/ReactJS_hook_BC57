@@ -1,45 +1,37 @@
-//rafce
-
 import React from 'react'
 import {useFormik} from 'formik'
-import {useNavigate} from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { loginApiAction } from '../redux/Reducers/UserReducer'
+import {useDispatch} from 'react-redux'
 const Login = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
   const frmLogin = useFormik({
-    initialValues: {  //initialValues giống với name trong input
-      email: '',
-      password: ''
+    initialValues:{
+      email:'',
+      password:''
     },
-    onSubmit: (userLogin) => {
-      console.log(userLogin);
-      // Xử lí đăng nhập
-      if (userLogin.email === 'admin' && userLogin.password === '123') {
-        navigate('/profile')
-      } else {
-        alert('email or password is invalid');
-        navigate('/forgot-password')
-      }
+    onSubmit: async (userLogin) =>{
+       const action = loginApiAction(userLogin)
+       dispatch(action)
     }
-  })
+  }) 
   return (
-    <div>
-      <form onSubmit={frmLogin.handleSubmit} className='p-4'>
-        <h3>Login</h3>
-        <div className="form-group">
-          <p>Email</p>
-          <input type="text" className='form-control' id='email' name='email' onChange={frmLogin.handleChange}/>
-        </div>
-        <div className="form-group">
-          <p>Password</p>
-          <input type="text" className='form-control' id='password' name='password' onChange={frmLogin.handleChange}/>
-        </div>
-        <div className="form-group">
-          <button type='submit' className='btn btn-success'>Login</button>
-        </div>
-      </form>
-    </div>
+    <form onSubmit={frmLogin.handleSubmit} className='container'>
+      <h3>Login</h3>
+      <div className='form-group'>
+        <p>email</p>
+        <input className='form-control' id='email' name='email' onChange={frmLogin.handleChange} />
+      </div>
+      <div className='form-group'>
+        <p>password</p>
+        <input className='form-control' id='password' name='password'  onChange={frmLogin.handleChange} />
+      </div>
+      <div className='form-group'>
+        <button type="submit" className='btn btn-success mt-2'>Login</button>
+      </div>
+    </form>
   )
 }
 
